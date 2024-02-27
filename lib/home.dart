@@ -8,10 +8,23 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+Expanded buildButtom() {
+  return Expanded(
+    child: FloatingActionButton(
+      elevation: 5.0,
+      onPressed: () async {
+        final player = AudioPlayer();
+        await player.play(AssetSource('a6.mp3'));
+      },
+    ),
+  );
+}
+
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
@@ -31,8 +44,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => Colors.pink,
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('a6.mp3'));
@@ -52,8 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => Colors.purple,
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('c3.mp3'));
@@ -73,8 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => Colors.blue,
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('c6.mp3'));
@@ -94,8 +101,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => Colors.yellow,
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('do.mp3'));
@@ -115,8 +120,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => Colors.teal,
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('e6.mp3'));
@@ -136,8 +139,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => Colors.red,
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('f6.mp3'));
@@ -157,8 +158,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => Colors.green,
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('g6.mp3'));
@@ -178,8 +177,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => Colors.orange,
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('la.mp3'));
@@ -199,8 +196,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => Colors.black,
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('mi.mp3'));
@@ -220,8 +215,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => const Color.fromARGB(255, 233, 179, 30),
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('piano.mp3'));
@@ -241,8 +234,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => Colors.lightGreenAccent,
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('re.mp3'));
@@ -262,8 +253,6 @@ class _MyHomePageState extends State<MyHomePage> {
               overlayColor: MaterialStateColor.resolveWith(
                 (states) => const Color.fromARGB(255, 247, 140, 175),
               ),
-              // splashColor: Colors.pink,
-              // focusColor: Colors.pink,
               onTap: () async {
                 final player = AudioPlayer();
                 await player.play(AssetSource('si.mp3'));
